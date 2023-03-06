@@ -1,0 +1,22 @@
+body {
+	background: #FFFAF0;
+	text-align: center;
+}
+
+.elemento {
+	font-size: 3vw;
+	margin: 2vw;
+}
+
+.etiquetaLogin {
+	display: inline-block;
+	width: 10vw;
+}
+
+p {
+	font-size: 50px;
+}
+
+.etiquetaLogin, p {
+	font-weight: bold;
+}
