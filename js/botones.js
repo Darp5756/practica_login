@@ -2,8 +2,9 @@
 $(document).ready(function()
 {
 	//Agregando submit al formulario para iniciar sesión
-	$("#formulario-login").submit(function()
+	$("#formulario-login").submit(function(event)
 	{
+		event.preventDefault();
 		$.ajax(
 		{
 			type: "POST",
@@ -13,20 +14,19 @@ $(document).ready(function()
 			{
 				if (respuesta == 1)
 				{
-					location.href = "../vistas/inicio.php";
-					alert("Verificación exitosa");
+				    alert("Verificación exitosa");
+				    window.location.href = "../vistas/inicio.php";
 				}
 				else
 					alert("Usuario o clave inválida");
-			},
-			async: false
+			}
 		});
 	});
 
 	//Agregando funcionalidad al botón de cerrar sesión
 	$("#boton-cerrar-sesion").click(function()
 	{
-		location.href = "../vistas/login.php";
-		alert("Sesión finalizada");
+	    alert("Sesión finalizada");
+	    window.location.href = "../vistas/login.php";
 	});
 });
